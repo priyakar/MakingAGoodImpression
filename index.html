@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      
+        html, body{
+            height: 100%;
+            width: 100%;
+             margin: 0px;
+            padding: 0px;
+        }
+       #map-canvas {
+            height: 100%;
+            width: 40%;
+            display: inline-block;
+        }
+        #direct-List{
+            text-align: center;
+            width: 50%;
+            color: whitesmoke;
+            display: inline-block;
+        }
+        
+        #divHeader{
+            text-align: center;
+        }
+        
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqSy8eepWaIqrCcKp9M9phu6BnMcMyIeg&libraries=places">
+    </script>
+    <script type="text/javascript" src="../gmap/gmap.js"></script>
+  </head>
+  <body>
+      <div id="divHeader"><h1>Header</h1>
+       <input type="radio" id="Options" name="type" onclick="calcWalkingRoute()"  value="WALKING">Walking
+      <input type="radio" id="Options" name="type" onclick="calcBicycleRoute()"   value="BIKING">Biking
+      <input type="radio" id="Options" name="type" onclick="calcTransitRoute()"   value="TRANSIT">Transit
+      <input type="checkbox" name="layOver" onclick="reRouteWithLayover()" id="layOver" value="layOver" />Get Coffee or Donuts
+      </div>
+     
+      
+      <div id="map-canvas"></div>
+       <div id="direct-List">Directions</div>
+  </body>
+</html>
